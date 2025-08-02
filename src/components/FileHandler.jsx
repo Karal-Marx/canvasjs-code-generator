@@ -33,7 +33,7 @@ export default function FileHandler({onFileLoad, onGenerate}) {
             className="filename-textbox"
             value={selectedFile ? selectedFile.name : "Choose a file"}
             readOnly
-            onClick={() => document.getElementById('fileInput').click()} // so users can click the box to select a file
+            onClick={() => document.getElementById('fileInput').click()} 
             tabIndex={0}
             style={{ cursor: 'pointer' }}
         />
