@@ -1,12 +1,95 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🎨 Code & Canvas – Image/PDF to Canvas Code Generator
+Generate clean, copy-paste-ready Canvas.js code from images or PDFs in one click.
 
-Currently, two official plugins are available:
+------------------------------------------------------------------------------------------------------------------------------------------------------
+✨ Features
+🔍 Instant Preview: Upload .png, .jpg, .jpeg, or .pdf files and preview them immediately.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🧠 Smart Code Generation: Converts visuals into Canvas code using modern HTML5 APIs.
 
-## Expanding the ESLint configuration
+📋 One-Click Copy: Instantly copy the generated code to your clipboard.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🧑‍🎨 Developer Friendly UI: Minimal, elegant interface inspired by ChatGPT’s code snippets.
+
+🎨 Custom Theme: Matches the “Code & Canvas” palette:
+
+Background: #f5f5f7
+
+Text: #1e1e1e
+
+Accent: #007acc
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🚀 How It Works
+
+Upload an image or PDF.
+
+Code is auto-generated in the background.
+
+Preview the canvas output (optional in UI).
+
+Copy the code and use it in any HTML5 project.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🛠️ Tech Stack
+
+Frontend: React.js
+
+Canvas API: HTML5 native canvas
+
+File Handling: JavaScript FileReader
+
+Styling: Custom CSS (No Tailwind)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+📂 Project Structure
+
+.
+├── public/
+│   └── index.html
+├── src/
+│   ├── App.jsx
+│   ├── components/
+│   │   ├── FileHandler.jsx
+│   │   ├── CodeArea.jsx
+│   │   └── Preview.jsx
+│   └── styles/
+│       └── main.css
+└── README.md
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🖼️ Example Output
+
+const canvas = document.createElement('canvas');
+canvas.width = 512;
+canvas.height = 512;
+const ctx = canvas.getContext('2d');
+
+const img = new Image();
+img.onload = function () {
+  ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+};
+img.src = 'data:image/png;base64,...';
+document.body.appendChild(canvas);
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+🧪 Future Scope
+
+ Drag & Drop File Upload
+
+ Better PDF rendering (via PDF.js)
+
+ Export as .js or .html files
+
+ Dark Mode Toggle
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🤝 Contributing
+Pull requests are welcome. If you'd like to suggest enhancements or fixes, open an issue.
